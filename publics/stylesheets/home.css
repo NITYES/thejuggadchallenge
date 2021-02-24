@@ -41,7 +41,7 @@
   
   
   section .hero h1 {
-      color: white;
+      color: rgb(0, 0, 0);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 80px;
     text-shadow: 2px 2px 0 rgb(255, 255, 255);
