@@ -16,9 +16,13 @@ app.get('/',(req,res)=>{
     res.render('home',{title:"Home"});
 })
 
+app.get('/contact',(req,res)=>{
+    res.render('contact',{title:"Contact"});
+})
+
 //error handling route at the lowest
 app.use((rer,res)=>{
-    res.render('error');
+    res.render('error',{title:"Error"});
 })
 
 
