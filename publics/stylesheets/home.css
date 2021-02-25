@@ -37,7 +37,52 @@
     align-items: center;
   }
   
+  .hero-content{
+    position: relative;
+  padding: 20px;
+
+  }
   
+  section .hero .circular-rotate{
+    position: absolute;
+    border: 10px solid rgb(218, 27, 27);
+    border-top-color: #ff6a00;
+    border-bottom-color: green;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    animation: round 2s linear infinite;
+  }
+  section .hero .circular-rotate.one{
+    top: 0;
+    left: 35%;
+  }
+
+  section .hero .circular-rotate.two{
+    top: 0;
+    left: 45%;
+  } 
+  section .hero .circular-rotate.three{
+    top: 0;
+    left: 55%;
+  }
+  
+
+  @keyframes round{
+    from{
+      
+      /* left: 15%; */
+      transform: rotate(0deg)
+    
+    }
+    to{
+      /* left: 85%; */
+      transform: rotate(360deg)
+    
+    }
+  }
+  
+
   
   
   section .hero h1 {
@@ -72,11 +117,12 @@
     height: 20vh;
     display: flex;
     color: white;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     position: relative;
   }
   footer .container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -84,18 +130,41 @@
     height: calc(20vh - 50px);
   }
   
-  footer .container div {
+  footer .container .logo {
     position: relative;
-    width: 33%;
-    height: 100%;
+    width: 100%;
+    height: calc(20vh - 50px - 50px);
     background: rgb(17, 17, 17);
-    box-shadow: 0 0 5px white;
-    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .container .email-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: rgb(17, 17, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
+
+  footer .container .email-container .fas{
+    font-size: 18px;
+    color: rgb(30, 210, 255);
+  }
+  footer .container .email-container .email-address{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+  }
+
   footer .copyrights {
       
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     line-height: 50px;
     position: absolute;
@@ -105,12 +174,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     bottom: 0;
   }
-  footer .container .logo {
-    display: flex;
-    justify-content: center;
   
-    align-items: center;
-  }
   .logo a {
     width: 50px;
     border-radius: 50%;
@@ -144,7 +208,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .fab {
-    font-size: 30px;
+    font-size:30px ;
   }
   
   .fa-facebook-square {
@@ -167,9 +231,9 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
   
   /* responsive design for mobile */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 540px) {
     section .hero h1 {
-      font-size: 40px;
+      font-size: 35px;
      
     }
 
@@ -178,6 +242,70 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-size: cover !important;
         
       }
-  
+
+      .logo a {
+        width: 40px;
+        height: 40px;
+       
+      }
+      .fab {
+        font-size:25px ;
+      }
+      footer .copyrights {
+      
+       
+        line-height: 30px;
+       font-size: 16px;
+        height: 30px;
+        
+      }
+
+
+      footer .container .logo {
+       
+        height: calc(20vh - 30px - 35px);
+     
+      }
     
+      footer .container .email-container {
+        height: 35px;
+       
+      }
+
+      footer .container .email-container .email-address{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 12px;
+        color: rgb(210, 220, 230);
+      }
+
+      section .hero .circular-rotate.one{
+       width: 25px;
+       height: 25px;
+      }
+    
+      section .hero .circular-rotate.two{
+        width: 25px;
+        height: 25px;
+      } 
+      section .hero .circular-rotate.three{
+        width: 25px;
+        height: 25px;
+      }
+
+
+      .hero-content{
+      padding: 50px;
+    
+      }
+}
+
+
+
+@media screen and (max-width: 330px) {
+
+  section .hero h1 {
+    font-size: 25px;
+   
   }
+
+}
