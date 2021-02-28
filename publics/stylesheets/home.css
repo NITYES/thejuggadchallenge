@@ -4,6 +4,7 @@
     box-sizing: border-box;
   }
   
+  /* header starts */
   header {
     height: 20vh;
     background: rgb(255, 255, 255);
@@ -17,104 +18,91 @@
     background-repeat: no-repeat;
     
   }
+  /* hesder ends */
   
-  
-  /* section */
+  /* section  starts*/
   section {
     height: 60vh;
-    background: rgb(119, 137, 221);
+    background: rgb(213, 215, 221);
     position: relative;
-    animation: sectionbackground 1s linear infinite;
   }
-  
-  
-  section .hero {
-    position: relative;
+  .coming-soon{
     width: 100%;
-    height: 100%;
+    height: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .hero-content{
-    position: relative;
-  padding: 20px;
-
-  }
-  
-  section .hero .circular-rotate{
-    position: absolute;
-    border: 10px solid rgb(218, 27, 27);
-    border-top-color: #ff6a00;
-    border-bottom-color: green;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    animation: round 2s linear infinite;
-  }
-  section .hero .circular-rotate.one{
-    top: 0;
-    left: 35%;
+  h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    text-shadow: 2px 2px 0 rgb(255 255 255);
+    animation: comingsoonblink 0.5s linear infinite;
   }
 
-  section .hero .circular-rotate.two{
-    top: 0;
-    left: 45%;
-  } 
-  section .hero .circular-rotate.three{
-    top: 0;
-    left: 55%;
-  }
-  
-
-  @keyframes round{
-    from{
-      
-      /* left: 15%; */
-      transform: rotate(0deg)
-    
-    }
-    to{
-      /* left: 85%; */
-      transform: rotate(360deg)
-    
-    }
-  }
-  
-
-  
-  
-  section .hero h1 {
-      color: rgb(0, 0, 0);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 80px;
-    text-shadow: 2px 2px 0 rgb(255, 255, 255);
-    animation: blink 0.5s linear infinite;
-  }
-  @keyframes blink {
+  @keyframes comingsoonblink {
     0% {
       text-shadow: 2px 2px 0 rgb(255, 255, 255);
     }
     25% {
-      text-shadow: 2px 2px 0 rgb(175, 44, 44);
+      text-shadow:  2px 2px 0 rgb(84, 81, 85);
     }
     50% {
-      text-shadow: 2px 2px 0 rgb(112, 82, 82);
+      text-shadow: 2px 2px 0 rgb(163, 71, 71);
     }
     75% {
-      text-shadow: 2px 2px 0 rgb(35, 45, 49);
+      text-shadow:  2px 2px 0 rgb(238, 242, 243);
     }
     100% {
-      text-shadow: 2px 2px 0 rgb(255, 255, 255);
+      text-shadow:  2px 2px 0 rgb(255, 255, 255);
     }
   }
-  section .hero h1:hover {
-    color:  rgb(75, 73, 204);
+  .initiative-digital-support-container{
+    position: inherit;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
   }
-  /*  */
+
+
+
+img{
+  width: 150px;
+  height: 150px;
+  /* margin: 20px auto; */
+  /* background-color: rgb(32, 10, 32); */
+}
+p{
+  padding: 5px;
+  font-size: 20px;
+}
+  .initiative,.digital{
+   text-align: center;
+  }
+
+  .digital{
+  }
+
+  .support-container{
+    text-align: center;
+   
+  }
+  
+  .support-content{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .support{
+
+  }
+  /* footer style starts...... */
   footer {
-    height: 20vh;
+    height: 30vh;
     display: flex;
     color: white;
     flex-direction: row;
@@ -122,36 +110,33 @@
     position: relative;
   }
   footer .container {
+    background-color: rgb(65, 62, 62);
     width: 100%;
+    height: calc(30vh - 50px );
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    height: calc(20vh - 50px);
   }
-  
-  footer .container .logo {
+  footer .socialmedialink-email-container{
+    width: 100%;
+    margin:auto
+  }
+
+  footer .container .socialmedialink-email-container .socialmedialink {
     position: relative;
     width: 100%;
-    height: calc(20vh - 50px - 50px);
-    background: rgb(17, 17, 17);
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  footer .container .email-container {
+  footer .container  .socialmedialink-email-container .email-container {
     position: relative;
-    width: 100%;
-    height: 50px;
-    background: rgb(17, 17, 17);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+  padding: 20px;
+   
   }
   
 
-  footer .container .email-container .fas{
+  footer .container .socialmedialink-email-container .email-container .fas{
     font-size: 18px;
     color: rgb(30, 210, 255);
   }
@@ -167,15 +152,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     line-height: 50px;
-    position: absolute;
     color: white;
     background: black;
     height: 50px;
     width: 100%;
-    bottom: 0;
+   
   }
   
-  .logo a {
+  .socialmedialink a {
     width: 50px;
     border-radius: 50%;
     display: inline-flex;
@@ -224,18 +208,16 @@
     color: #bc2a8d;
   }
   
-  .logo a:hover {
+  .socialmedialink a:hover {
     background: rgb(255, 255, 255);
   }
-  
+    /* footer style starts ends */
+
   
   
   /* responsive design for mobile */
-  @media screen and (max-width: 540px) {
-    section .hero h1 {
-      font-size: 35px;
-     
-    }
+  @media screen and (max-width: 750px) {
+   
 
     header .logo {
    
@@ -243,69 +225,83 @@
         
       }
 
-      .logo a {
-        width: 40px;
-        height: 40px;
+      .socialmedialink a {
+        width: 50px;
+        height: 50px;
        
       }
+      section {
+        height: 140vh;
+      }
+
+      .initiative-digital-support-container{
+        flex-direction: column;
+        height: 90%;
+      }
+      .initiative,.digital{
+        width: 100%;
+      
+    
+      }
+      .support-container{
+        width: 100%;
+        
+      }
+      .support-content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* footer */
+
       .fab {
         font-size:25px ;
       }
-      footer .copyrights {
-      
-       
-        line-height: 30px;
-       font-size: 16px;
-        height: 30px;
-        
-      }
 
-
-      footer .container .logo {
-       
-        height: calc(20vh - 30px - 35px);
      
+      .coming-soon{
+      
+        height: 10%;
+      
       }
-    
-      footer .container .email-container {
-        height: 35px;
-       
+      h1{
+        font-size: 30px !important;
       }
-
+     
       footer .container .email-container .email-address{
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: 12px;
-        color: rgb(210, 220, 230);
-      }
-
-      section .hero .circular-rotate.one{
-       width: 25px;
-       height: 25px;
+    
+        font-size: 13px;
       }
     
-      section .hero .circular-rotate.two{
-        width: 25px;
-        height: 25px;
-      } 
-      section .hero .circular-rotate.three{
-        width: 25px;
-        height: 25px;
+      .copyrights p{
+        font-size: 13px !important;
       }
-
-
-      .hero-content{
-      padding: 50px;
-    
-      }
+      
 }
 
 
+/* responsive for tablet */
+@media screen and (max-width: 1170px) {
 
-@media screen and (max-width: 330px) {
+  .support-content{
+    width: 80%;
+    
+  }
+ 
+ 
 
-  section .hero h1 {
-    font-size: 25px;
-   
+}
+
+@media screen and (max-width: 880px) {
+
+  .support-content{
+    width: 100%;
+    
+  }
+ 
+  h1{
+    font-size: 3rem;
   }
 
 }
