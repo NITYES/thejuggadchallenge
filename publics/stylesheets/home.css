@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* header starts */
+  header {
+    height: 20vh;
+    background: rgb(255, 255, 255);
+  }
+  header .logo {
+    width: 100%;
+    height: 20vh;
+    background-image: url('/images/juggad_imagess.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+  }
+  /* hesder ends */
+  
+  /* section  starts*/
+  section {
+    height: 60vh;
+    background: rgb(213, 215, 221);
+    position: relative;
+  }
+  .coming-soon{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    text-shadow: 2px 2px 0 rgb(255 255 255);
+    animation: comingsoonblink 0.5s linear infinite;
+  }
+
+  @keyframes comingsoonblink {
+    0% {
+      text-shadow: 2px 2px 0 rgb(255, 255, 255);
+    }
+    25% {
+      text-shadow:  2px 2px 0 rgb(84, 81, 85);
+    }
+    50% {
+      text-shadow: 2px 2px 0 rgb(163, 71, 71);
+    }
+    75% {
+      text-shadow:  2px 2px 0 rgb(238, 242, 243);
+    }
+    100% {
+      text-shadow:  2px 2px 0 rgb(255, 255, 255);
+    }
+  }
+  .initiative-digital-support-container{
+    position: inherit;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
+
+
+img{
+  width: 150px;
+  height: 150px;
+  /* margin: 20px auto; */
+  /* background-color: rgb(32, 10, 32); */
+}
+p{
+  padding: 5px;
+  font-size: 20px;
+}
+  .initiative,.digital{
+   text-align: center;
+  }
+
+  .digital{
+  }
+
+  .support-container{
+    text-align: center;
+   
+  }
+  
+  .support-content{
+    margin:0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .support{
+
+  }
+  /* footer style starts...... */
+  footer {
+    height: 30vh;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  footer .container {
+    background-color: rgb(65, 62, 62);
+    width: 100%;
+    height: calc(30vh - 50px );
+    display: flex;
+  }
+  footer .socialmedialink-email-container{
+    width: 100%;
+    margin:auto
+  }
+
+  footer .container .socialmedialink-email-container .socialmedialink {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .container  .socialmedialink-email-container .email-container {
+    position: relative;
+    text-align: center;
+  padding: 20px;
+   
+  }
+  
+
+  footer .container .socialmedialink-email-container .email-container .fas{
+    font-size: 18px;
+    color: rgb(30, 210, 255);
+  }
+  footer .container .email-container .email-address{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+  }
+
+  footer .copyrights {
+      
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    background: black;
+    height: 50px;
+    width: 100%;
+   
+  }
+  
+  .socialmedialink a {
+    width: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    background: rgb(3, 3, 3);
+    margin: 5px;
+    box-shadow: 0 0 5px white;
+    animation: logoshadow 0.5s linear infinite;
+  }
+  
+  @keyframes logoshadow {
+    0% {
+      box-shadow: 0 0 5px rgb(255, 255, 255);
+    }
+    25% {
+      box-shadow: 0 0 5px rgb(175, 44, 44);
+    }
+    50% {
+      box-shadow: 0 0 5px rgb(112, 82, 82);
+    }
+    75% {
+      box-shadow: 0 0 5px rgb(35, 45, 49);
+    }
+    100% {
+      box-shadow: 0 0 5px rgb(255, 255, 255);
+    }
+  }
+  
+  .fab {
+    font-size:30px ;
+  }
+  
+  .fa-facebook-square {
+    color: #3b5998;
+  }
+  .fa-linkedin {
+    color: #0e76a8;
+  }
+  .fa-twitter {
+    color: #2299dd;
+  }
+  .fa-instagram {
+    color: #bc2a8d;
+  }
+  
+  .socialmedialink a:hover {
+    background: rgb(255, 255, 255);
+  }
+    /* footer style starts ends */
+
+  
+  
+  /* responsive design for mobile */
+  @media screen and (max-width: 750px) {
+   
+
+    header .logo {
+   
+        background-size: cover !important;
+        
+      }
+
+      .socialmedialink a {
+        width: 50px;
+        height: 50px;
+       
+      }
+      section {
+        height: 140vh;
+      }
+
+      .initiative-digital-support-container{
+        flex-direction: column;
+        height: 90%;
+      }
+      .initiative,.digital{
+        width: 100%;
+      
+    
+      }
+      .support-container{
+        width: 100%;
+        
+      }
+      .support-content{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* footer */
+
+      .fab {
+        font-size:25px ;
+      }
+
+     
+      .coming-soon{
+      
+        height: 10%;
+      
+      }
+      h1{
+        font-size: 30px !important;
+      }
+     
+      footer .container .email-container .email-address{
+    
+        font-size: 13px;
+      }
+    
+      .copyrights p{
+        font-size: 13px !important;
+      }
+      
+}
+
+
+/* responsive for tablet */
+@media screen and (max-width: 1170px) {
+
+  .support-content{
+    width: 80%;
+    
+  }
+ 
+ 
+
+}
+
+@media screen and (max-width: 880px) {
+
+  .support-content{
+    width: 100%;
+    
+  }
+ 
+  h1{
+    font-size: 3rem;
+  }
+
+}
